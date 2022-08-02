@@ -12,11 +12,11 @@ library(MetBrewer)
 library(scales)
 ```
 
-```{r}
+```{r, echo = FALSE}
 ec <- read_rds("ec.rds") 
 ```
 
-```{r, warning = FALSE}
+```{r, warning = FALSE, echo = FALSE}
 ec |> 
   separate(county_name, into = c("county_name_alone", "state"), sep = ", ") |>
   filter(state %in% c("North Carolina", "Georgia")) |>

@@ -1,0 +1,11 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/929059/f71f771dd0ab46dbb495231e10e14751
+bundleId: https://api.rpubs.com/api/v1/document/929059/f71f771dd0ab46dbb495231e10e14751
+url: http://rpubs.com/RachelHeiss/929059
+when: 1659405597.62494
+lastSyncTime: 1659405597.62496
