@@ -9,11 +9,23 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(MetBrewer)
+library(scales)
 ```
+
 ```{r}
-ec <- read_rds("ec.rds")
-summary(ec)
+ec <- read_rds("ec.rds") 
 ```
 
-
- 
+```{r, warning = FALSE}
+ec |> 
+  separate(county_name, into = c("county_name_alone", "state"), sep = ", ") |>
+  filter(state %in% c("North Carolina", "Georgia")) |>
+  ggplot(aes(x = pop2018, fill = state)) +
+  geom_histogram(color = "white", binwidth = 50000, boundary = 0) +
+  facet_wrap(~state, ncol = 1) +
+  scale_x_continuous(labels = comma, breaks =  seq(0, 1000000, 250000)) +
+  scale_fill_manual(values = met.brewer("Hiroshige", 2)) +
+  guides(fill = "none")+
+  labs(x = "Population in 2018", y = "Number of Counties")+
+  theme_minimal()
+```
