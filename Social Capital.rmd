@@ -1,5 +1,5 @@
 ---
-title: "Social Capital"
+title: "County Population in Georgia versus North Carolina"
 author: "Rachel Heiss"
 date: "2022-08-01"
 output: html_document
@@ -26,6 +26,8 @@ ec |>
   scale_x_continuous(labels = comma, breaks =  seq(0, 1000000, 250000)) +
   scale_fill_manual(values = met.brewer("Hiroshige", 2)) +
   guides(fill = "none")+
-  labs(x = "Population in 2018", y = "Number of Counties")+
+  labs(x = "Population in 2018", y = "Number of Counties", 
+       title = "County Population in Georgia vs. North Carolina", 
+       subtitle = "There are more counties with high populations in Georgia.")+
   theme_minimal()
 ```
