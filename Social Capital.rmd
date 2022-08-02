@@ -1,0 +1,19 @@
+---
+title: "Social Capital"
+author: "Rachel Heiss"
+date: "2022-08-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(MetBrewer)
+```
+```{r}
+ec <- read_rds("ec.rds")
+summary(ec)
+```
+
+
+ 
